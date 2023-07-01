@@ -1,0 +1,62 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color: #252525;
+  background-color: transparent;
+
+  --back: rgb(61, 1, 130);
+  --grad: linear-gradient(
+    90deg,
+    rgba(61, 1, 130, 1) 0%,
+    rgba(0, 85, 228, 1) 100%
+  );
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.counter-container {
+  background: linear-gradient(
+    90deg,
+    rgba(40, 40, 40, 1) 0%,
+    rgba(25, 25, 25, 1) 100%
+  );
+  position: relative;
+  transition: all 750ms ease-in-out;
+  padding: 5px 10px;
+  width: 200px;
+  border-radius: 12px;
+  color: white;
+  text-align: center;
+  font-weight: 700;
+  font-size: 24px;
+  overflow: hidden;
+}
+.counter {
+  z-index: 5000000;
+  position: relative;
+}
+
+.counter-done {
+  background: linear-gradient(
+    90deg,
+    rgba(61, 1, 130, 1) 0%,
+    rgba(0, 85, 228, 1) 100%
+  );
+  transition: all 300ms ease-in-out;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 0;
+}
