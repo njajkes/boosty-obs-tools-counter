@@ -1,13 +1,10 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { Counter } from "./counter";
+import { AppRouter, Providers } from "./shared";
 
 function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="counter" element={<Counter />} />
-      </Routes>
-    </BrowserRouter>
+    <Providers>
+      <AppRouter />
+    </Providers>
   );
 }
 
