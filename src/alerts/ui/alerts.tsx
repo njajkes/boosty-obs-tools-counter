@@ -18,18 +18,26 @@ export const Alert = () => {
 
   return (
     <div
-      className="flex-row items-center max-w-[600px] transition-opacity"
+      className="flex-row items-center max-w-[600px] transition-opacity alert-container"
       style={{
         display: alert ? "flex" : "none",
         opacity: opacity ? "100" : "0",
       }}
     >
-      <div className="p-[10px] shrink-0">
-        <img src="/alert-pic.jpg" className="w-[100px] h-[100px] rounded-md" />
+      <div className="p-[10px] shrink-0 alert-image-container">
+        <img
+          src="/alert-pic.jpg"
+          className="w-[100px] h-[100px] rounded-md alert-image"
+        />
       </div>
-      <div className="font-bold text-3xl text-orange-400 [text-shadow:_1px_1px_0px_black,_-1px_-1px_0px_black,_1px_-1px_0px_black,_-1px_1px_0px_black]">
-        {alert?.displayName || ""} только что подписался на Boosty за{" "}
-        {alert?.level.currencyPrices.RUB || ""} RUB
+      <div className="font-bold text-3xl text-orange-400 [text-shadow:_1px_1px_0px_black,_-1px_-1px_0px_black,_1px_-1px_0px_black,_-1px_1px_0px_black] alert-text">
+        <span className="alert-name">{alert?.displayName || ""}</span> только
+        что подписался на Boosty за
+        <span className="alert-price">
+          {" "}
+          {alert?.level?.currencyPrices?.RUB || ""}
+        </span>{" "}
+        RUB
       </div>
     </div>
   );
